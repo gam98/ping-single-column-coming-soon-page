@@ -1,0 +1,134 @@
+:root { 
+// ## Colors
+// ### Primary
+--blue: hsl(223, 87%, 63%);
+// ### Secondary
+--paleBlue: hsl(223, 100%, 88%);
+--lightRed: hsl(354, 100%, 66%);
+// ### Neutral
+--gray: hsl(0, 0%, 59%);
+--veryDarkBlue: hsl(209, 33%, 12%);
+}
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    // -Weights: 300, 600, 700
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 80%;
+    // border: 2px solid red;
+    // margin: auto;
+}
+.header {
+    img {
+        display: block;
+        margin: auto;
+    }
+    h1 {
+        text-align: center;
+        color: var(--gray);
+        font-weight: 300;
+        font-size: 30px;
+        strong {
+            font-weight: 700;
+            color: var(--veryDarkBlue);
+        }
+    }
+    h4 {
+        text-align: center;
+        color: var(--veryDarkBlue);
+        font-weight: 300;
+        font-size: 13px;
+    }
+}
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    input { 
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: 1px solid var(--paleBlue);
+        width: 250px;
+        font-size: 13px;
+    } 
+    .warning-input {
+        border: 1px solid var(--lightRed);
+    }
+    button {
+        padding: 10px 35px;
+        border-radius: 30px;
+        width: 130px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        background-color: var(--blue);
+        color: #fff;
+        align-self: start;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.hero {
+    margin: auto;
+    display: block;
+    margin-bottom: 40px;
+}
+footer {
+    text-align: center;
+    font-size: 10px;
+    ul {
+        display: flex;  
+        justify-content: center;
+        padding-left: 0;
+        gap: 10px;
+        li {
+            list-style: none;
+            a { 
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--paleBlue);
+                border-radius: 50%;
+                line-height: 20px;
+                text-decoration: none;
+                color: var(--blue);
+                &:hover {
+                    color: #Fff;
+                    background: var(--blue);
+                }
+            }
+        }
+    }   
+}
+.warning {
+    display: none;
+}
+.warning-active {
+    display: block;
+    font-size: 10px;
+    margin-left: 20px;  
+    color: var(--lightRed);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 376px){
+    form {
+        flex-wrap: wrap;
+        .btn {
+            width: 100%;
+        }
+    }
+    .hero {
+        width: 290px;
+    }
+}
